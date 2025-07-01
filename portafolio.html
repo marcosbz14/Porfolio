@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="portafolio.css" />
+  </head>
+  <body>
+    <header>
+        <div class="header-left">
+          <h1>Marcos Bzezanski - Consultor SAP HCM</h1>
+        </div>
+        <nav class="header-right">
+          <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#calculadora">Calculadora</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#tareas">Tareas</a></li>
+          </ul>
+        </nav>
+    </header>
+      
+
+    <main>
+      <section id="sobre-mi">
+        <article>
+          <h2>Sobre mí</h2>
+          <p>
+            Soy estudiante avanzado de la Licenciatura en Sistemas, con una fuerte vocación por la tecnología y la transformación digital de los procesos empresariales. Actualmente me desempeño como consultor SAP, lo que me ha permitido aplicar mis conocimientos académicos en un entorno profesional real, participando en proyectos de implementación, soporte y optimización de sistemas.
+          </p>
+          <p>
+            Mi formación me brinda una base sólida en programación, bases de datos, análisis de sistemas y arquitectura de software, mientras que mi experiencia laboral me ha permitido especializarme en el ecosistema SAP, comprendiendo tanto los aspectos técnicos como funcionales de la plataforma.
+          </p>
+          <p>
+            Me considero una persona proactiva, con gran capacidad de aprendizaje y adaptación. Disfruto trabajar en equipo, resolver problemas complejos y seguir formándome constantemente para estar al día con las últimas tendencias tecnológicas.
+          </p>
+          
+          <a href="sobre-mi (1).html">
+            <button>Leer más</button>
+          </a>
+        </article>
+      </section>
+
+      <section id="habilidades">
+        <article>
+          <h2>Habilidades</h2>
+          <ul class="habilidades-lista">
+            <li><span>SAP HCM</span></li>
+            <li><span>SAP ABAP</span></li>
+            <li><span>Office 360</span></li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="proyectos">
+        <article>
+          <h2>Proyectos Destacados</h2>
+          <div class="contenedor-articulos" id="articulos">
+            <article class="proyecto">
+              <h3>Implementacion SAP HCM</h3>
+              <p>
+                Desarrollé y encabeze una implementacion de SAP HCM en mexico
+              </p>
+            </article>
+            <article class="proyecto">
+              <h3>Aplicación de Tareas</h3>
+              <p>
+                Una aplicación web para gestionar tareas diarias, construida con
+                React y Firebase.
+              </p>
+            </article>
+          </div>
+        </article>
+      </section>
+
+      <section id="experiencia">
+        <article>
+          <h2>Experiencia Profesional</h2>
+          <div class="timeline">
+            <div class="timeline-event experiencia-item">
+              <h4>Packaged app development  </h4>
+              <p>
+                2024 - Presente: Consultoria SAP HCM.
+              </p>
+            </div>
+            <div class="timeline-event experiencia-item">
+              <h4>Responsable de gestión de procesos de cadena de suministros</h4>
+              <p>
+                2021 - 2024: Administracion de procesos de cadena de suministros.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+        <section id="calculadora">
+            <article>
+              <h2>Calculadora Básica</h2>
+              <div class="calculadora">
+                <input type="number" id="num1" placeholder="Número 1" />
+                <input type="number" id="num2" placeholder="Número 2" />
+                <select id="operacion">
+                  <option value="sumar">Sumar</option>
+                  <option value="restar">Restar</option>
+                  <option value="multiplicar">Multiplicar</option>
+                  <option value="dividir">Dividir</option>
+                  <option value="porcentaje">Porcentaje</option>
+                  <option value="raiz cuadrada">Raiz cuadrada</option>
+                </select>
+                <button onclick="calcular()">Calcular</button>
+                <p id="resultado">Resultado: </p>
+              </div>
+            </article>
+        </section>
+
+        <section id="galeria">
+            <article>
+              <h2>Galería de Imágenes</h2>
+              <div class="galeria">
+                <img src="foto1.jpeg" alt="Imagen 1" onclick="abrirLightbox(this)" />
+                <img src="foto2.jpeg" alt="Imagen 2" onclick="abrirLightbox(this)" />
+                <img src="foto3.jpeg" alt="Imagen 3" onclick="abrirLightbox(this)" />
+              </div>
+            </article>
+        </section>
+          
+          
+        <div id="lightbox" onclick="cerrarLightbox()">
+            <img id="lightbox-img" src="" alt="Imagen ampliada" />
+        </div>
+
+        <section id="tareas">
+            <article>
+              <h2>Lista de Tareas</h2>
+              <div class="tareas-container">
+                <input type="text" id="nueva-tarea" placeholder="Escribe una nueva tarea..." />
+                <button onclick="agregarTarea()">Agregar</button>
+                <ul id="lista-tareas"></ul>
+              </div>
+            </article>
+        </section>
+              
+
+        
+
+      <section id="contacto">
+        <article>
+          <h2>Contacto</h2>
+          <form>
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo electrónico" required />
+            <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </article>
+      </section>
+
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        Volver al inicio
+      </button>
+    </main>
+  
+    <footer>
+      <p>© 2025 Blog de Kitesurf. Síguenos en redes sociales.</p>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/marcosbezzanski/" target="_blank">
+          <img
+            src="instagram-100.png"
+            alt="Instagram"
+            style="width: 50px; height: auto"
+          />
+        </a>
+
+        <a href="https://www.tiktok.com/@marcos__lo" target="_blank">
+          <img
+            src="tik-tok-100.png"
+            alt="TikTok"
+            style="width: 50px; height: auto"
+          />
+        </a>
+      </div>
+    </footer>
+    <script>
+        function calcular() {
+          const num1 = parseFloat(document.getElementById("num1").value);
+          const num2 = parseFloat(document.getElementById("num2").value);
+          const operacion = document.getElementById("operacion").value;
+          let resultado;
+      
+          switch (operacion) {
+            case "sumar":
+              if (isNaN(num1) || isNaN(num2)) {
+                resultado = "Por favor ingresa ambos números.";
+              } else {
+                resultado = num1 + num2;
+              }
+              break;
+      
+            case "restar":
+              if (isNaN(num1) || isNaN(num2)) {
+                resultado = "Por favor ingresa ambos números.";
+              } else {
+                resultado = num1 - num2;
+              }
+              break;
+      
+            case "multiplicar":
+              if (isNaN(num1) || isNaN(num2)) {
+                resultado = "Por favor ingresa ambos números.";
+              } else {
+                resultado = num1 * num2;
+              }
+              break;
+      
+            case "dividir":
+              if (isNaN(num1) || isNaN(num2)) {
+                resultado = "Por favor ingresa ambos números.";
+              } else {
+                resultado = num2 !== 0 ? num1 / num2 : "No se puede dividir por cero.";
+              }
+              break;
+      
+            case "porcentaje":
+              if (isNaN(num1) || isNaN(num2)) {
+                resultado = "Por favor ingresa ambos números.";
+              } else {
+                resultado = (num1 * num2) / 100;
+              }
+              break;
+      
+            case "raiz":
+              if (isNaN(num1)) {
+                resultado = "Por favor ingresa un número para la raíz.";
+              } else {
+                resultado = num1 >= 0 ? Math.sqrt(num1) : "No se puede calcular la raíz de un número negativo.";
+              }
+              break;
+      
+            default:
+              resultado = "Operación no válida.";
+          }
+      
+          document.getElementById("resultado").textContent = "Resultado: " + resultado;
+        }
+    </script>
+      
+
+    <script>
+        function abrirLightbox(imagen) {
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImg = document.getElementById("lightbox-img");
+          lightboxImg.src = imagen.src;
+          lightbox.style.display = "flex";
+        }
+      
+        function cerrarLightbox() {
+          document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+    
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", cargarTareas);
+      
+        function agregarTarea() {
+          const input = document.getElementById("nueva-tarea");
+          const texto = input.value.trim();
+          if (texto !== "") {
+            const tareas = obtenerTareas();
+            tareas.push(texto);
+            localStorage.setItem("tareas", JSON.stringify(tareas));
+            input.value = "";
+            cargarTareas();
+          }
+        }
+      
+        function cargarTareas() {
+          const lista = document.getElementById("lista-tareas");
+          lista.innerHTML = "";
+          const tareas = obtenerTareas();
+          tareas.forEach((tarea, index) => {
+            const li = document.createElement("li");
+            li.textContent = tarea;
+      
+            const btnEliminar = document.createElement("button");
+            btnEliminar.textContent = "Eliminar";
+            btnEliminar.onclick = () => eliminarTarea(index);
+      
+            li.appendChild(btnEliminar);
+            lista.appendChild(li);
+          });
+        }
+      
+        function eliminarTarea(index) {
+          const tareas = obtenerTareas();
+          tareas.splice(index, 1);
+          localStorage.setItem("tareas", JSON.stringify(tareas));
+          cargarTareas();
+        }
+      
+        function obtenerTareas() {
+          return JSON.parse(localStorage.getItem("tareas")) || [];
+        }
+      </script>
+      
+      
+  </body>
+</html>
